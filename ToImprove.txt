@@ -1,0 +1,8 @@
+These functions should be considered for the future version.
+
+1. Be able to grab data from Database file and check the status of online units.
+2. Be able to grab coordinates from Database file and generate a historical file. Eventually update the coordinates, and refer to this file to generate the coordiates for output files.
+3. Automatically upload to Googlemap to upload the map and kml file.
+4. Read directly from FDR achive spreadsheet without generatating FDRdeploy.csv file.
+5. Able to change the icon on Googlemap.
+6. Data analysis function and report generation. (Data loss rate, satellites, frequency, phase angle, etc.)
