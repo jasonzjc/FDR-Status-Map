@@ -40,7 +40,7 @@ FileFDRdeploy.close
 FDRonName = list()
 FileOnlineOut = open('Onlinemap.csv','w')
 count = 0
-OnlineOutHead = 'ID,Name,Latitude,Longitude\r\n'
+OnlineOutHead = 'ID,Name,Latitude,Longitude\r'
 FileOnlineOut.write(OnlineOutHead)
 for ID in FDRonID:
 	IDNo = FDRIDAll.index(ID)
@@ -55,7 +55,7 @@ FileOnlineOut.close
 # generate offline unit table for mapping, including ID, name, and location
 FileOfflineOut = open('Offlinemap.csv','w')
 count = 0
-OfflineOutHead = 'ID,Name,Location\r\n'
+OfflineOutHead = 'ID,Name,Location\r'
 FileOfflineOut.write(OfflineOutHead)
 for ID in FDRIDAll:
 	if FDRDeployStatAll[count] == '0':
@@ -68,7 +68,7 @@ for ID in FDRIDAll:
 		count = count + 1
 		continue
 	
-	line = FDRIDAll[count] + "," + FDRNameAll[count] + "," + FDRLocationAll[count] + "\r\n"
+	line = FDRIDAll[count] + "," + FDRNameAll[count] + "," + FDRLocationAll[count] + "\r"
 	count = count + 1
 	FileOfflineOut.write(line)
 # 	print count, ID, FDRDeployStatAll[count-1]
@@ -78,11 +78,11 @@ FileOfflineOut.close
 # generate to be deployed unit table for mapping, including ID, name, and location
 FileToDeployOut = open('ToDeploymap.csv','w')
 count = 0
-ToDeployOutHead = 'ID,Name,Location\r\n'
+ToDeployOutHead = 'ID,Name,Location\r'
 FileToDeployOut.write(ToDeployOutHead)
 for ID in FDRIDAll:
 	if FDRDeployStatAll[count] == '2':
-		line = FDRIDAll[count] + "," + FDRNameAll[count] + "," + FDRLocationAll[count] + "\r\n"
+		line = FDRIDAll[count] + "," + FDRNameAll[count] + "," + FDRLocationAll[count] + "\r"
 		FileToDeployOut.write(line)
 	count = count + 1
 	
@@ -93,11 +93,11 @@ FileToDeployOut.close
 # generate returned unit table for mapping, including ID, name, and location
 FileReturnedOut = open('Returnedmap.csv','w')
 count = 0
-ReturnedOutHead = 'ID,Name,Location\r\n'
+ReturnedOutHead = 'ID,Name,Location\r'
 FileReturnedOut.write(ReturnedOutHead)
 for ID in FDRIDAll:
 	if FDRDeployStatAll[count] == '0':
-		line = FDRIDAll[count] + "," + FDRNameAll[count] + "," + FDRLocationAll[count] + "\r\n"
+		line = FDRIDAll[count] + "," + FDRNameAll[count] + "," + FDRLocationAll[count] + "\r"
 		FileReturnedOut.write(line)
 	count = count + 1
 	
